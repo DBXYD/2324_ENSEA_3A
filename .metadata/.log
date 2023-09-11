@@ -16,3 +16,57 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-09-10 19:11:03.682
 !MESSAGE Indexed 'NUCLEO-G431RB_HelloWorld' (23 sources, 83 headers) in 1.5 sec: 5,440 declarations; 27,031 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0062%)
+!SESSION 2023-09-10 19:59:26.536 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-10 19:59:43.296
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-10 19:59:43.297
+!MESSAGE Log4j2 initialized with config file /home/nicolas/git/2324_ENSEA_3A/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-10 19:59:51.288
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-10 19:59:57.787
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-09-10 19:59:58.130
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$39
+!SESSION 2023-09-11 08:27:38.668 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-11 08:27:42.118
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-11 08:27:44.282
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-11 08:27:44.282
+!MESSAGE Log4j2 initialized with config file /home/nicolas/git/2324_ENSEA_3A/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-11 08:27:49.548
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-11 08:58:16.154
+!MESSAGE Indexed 'dummy' (23 sources, 83 headers) in 1.62 sec: 5,440 declarations; 27,031 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0062%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-11 09:26:54.731
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 8 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-11 09:26:54.731
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-11 09:26:54.731
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 8 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-11 09:26:54.731
+!MESSAGE Existing sessions are:

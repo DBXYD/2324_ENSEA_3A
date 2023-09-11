@@ -1,0 +1,36 @@
+09:28:46 **** Incremental Build of configuration Debug for project dummy ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:92: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   99 |                 msgSize = snprintf(uartTxBuffer,UART_TX_BUFFER_SIZE,"Hello world, temps = %d sec...\r\n", time);
+      |                                                                                           ~^              ~~~~
+      |                                                                                            |              |
+      |                                                                                            int            uint32_t {aka long unsigned int}
+      |                                                                                           %ld
+../Core/Src/main.c:100:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  100 |                 HAL_UART_Transmit(&hlpuart1, uartTxBuffer, msgSize, HAL_MAX_DELAY);
+      |                                              ^~~~~~~~~~~~
+      |                                              |
+      |                                              char *
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:348,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h:1611:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1611 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "dummy.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/nicolas/git/2324_ENSEA_3A/dummy/STM32G431RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dummy.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dummy.elf
+ 
+arm-none-eabi-size   dummy.elf 
+arm-none-eabi-objdump -h -S  dummy.elf  > "dummy.list"
+   text	   data	    bss	    dec	    hex	filename
+  14088	    100	   2108	  16296	   3fa8	dummy.elf
+Finished building: default.size.stdout
+ 
+Finished building: dummy.list
+ 
+
+09:28:47 Build Finished. 0 errors, 2 warnings. (took 882ms)
+
