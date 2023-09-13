@@ -1,0 +1,30 @@
+09:22:57 **** Incremental Build of configuration Debug for project NUCLEO-G431RB_Stepper ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:98:38: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   98 |         HAL_UART_Transmit(&hlpuart1, "Stepper project\r\n", 17, 100);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:348,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h:1611:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1611 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "NUCLEO-G431RB_Stepper.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/nicolas/git/2324_ENSEA_3A/NUCLEO-G431RB_Stepper/STM32G431RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-G431RB_Stepper.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NUCLEO-G431RB_Stepper.elf
+ 
+arm-none-eabi-size   NUCLEO-G431RB_Stepper.elf 
+arm-none-eabi-objdump -h -S  NUCLEO-G431RB_Stepper.elf  > "NUCLEO-G431RB_Stepper.list"
+   text	   data	    bss	    dec	    hex	filename
+  11736	     20	   1716	  13472	   34a0	NUCLEO-G431RB_Stepper.elf
+Finished building: default.size.stdout
+ 
+Finished building: NUCLEO-G431RB_Stepper.list
+ 
+
+09:22:58 Build Finished. 0 errors, 1 warnings. (took 906ms)
+
